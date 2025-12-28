@@ -23,7 +23,7 @@ repository               : "0xryz/0xryz.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "pictures/raven.jpg"
+  avatar           : "profile.png"
   name             : "0xryz"
   pronouns         : # example: "she/her"  
   bio              : "Full Time bug bounty Hunter"
