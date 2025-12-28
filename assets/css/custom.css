@@ -28,6 +28,15 @@ html[data-theme="dark"] {
   margin-bottom: 10px !important;
 }
 
+/* Make about page content smaller */
+.page__content {
+  font-size: 0.9em !important;
+}
+
+.page__content p {
+  margin-bottom: 0.8em !important;
+}
+
 /* Dark blue navigation bar */
 .masthead {
   background: #1e40af !important; /* Dark blue */
