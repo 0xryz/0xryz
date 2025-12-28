@@ -1,0 +1,70 @@
+/* Custom styles for 0xryz website */
+
+/* Force light mode - prevent dark theme */
+html {
+  data-theme: light !important;
+}
+
+html[data-theme="dark"] {
+  data-theme: light !important;
+}
+
+/* Dark blue navigation bar */
+.masthead {
+  background: #1e40af !important; /* Dark blue */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.masthead__menu-item {
+  background-color: #1e40af !important; /* Dark blue */
+}
+
+.greedy-nav {
+  background: #1e40af !important; /* Dark blue */
+}
+
+.greedy-nav button {
+  background-color: #1e40af !important; /* Dark blue */
+}
+
+/* White text on dark blue navigation */
+.masthead a,
+.masthead__menu-item a {
+  color: #ffffff !important; /* White text */
+}
+
+.masthead a:hover,
+.masthead__menu-item a:hover {
+  color: #e0e0e0 !important; /* Light gray on hover */
+}
+
+.greedy-nav a {
+  color: #ffffff !important; /* White text */
+}
+
+.greedy-nav a:hover {
+  color: #e0e0e0 !important; /* Light gray on hover */
+}
+
+/* Navigation icon (hamburger menu) color */
+.greedy-nav button span.navicon,
+.greedy-nav button span.navicon::before,
+.greedy-nav button span.navicon::after {
+  background-color: #ffffff !important; /* White */
+}
+
+/* Border color for navigation */
+.masthead::after {
+  background: rgba(255, 255, 255, 0.2) !important; /* Light border */
+}
+
+/* Hidden links dropdown styling */
+.greedy-nav .hidden-links {
+  background: #1e40af !important; /* Dark blue */
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.greedy-nav .hidden-links li {
+  border-bottom-color: rgba(255, 255, 255, 0.2) !important;
+}
+
