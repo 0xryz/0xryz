@@ -8,5 +8,5 @@ excerpt: "> “Can a man still be brave if he's afraid?” “That is the only t
 ---
 
 > “Can a man still be brave if he's afraid?” “That is the only time a man can be brave.”
-— **George R.R. Martin,** *A Game of Thrones.*
+> — **George R.R. Martin,** *A Game of Thrones.*
 
