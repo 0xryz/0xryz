@@ -2,11 +2,28 @@
 
 /* Force light mode - prevent dark theme */
 html {
-  data-theme: light !important;
+  color-scheme: light !important;
 }
 
-html[data-theme="dark"] {
-  data-theme: light !important;
+html[data-theme="dark"],
+html[data-theme],
+html {
+  /* Force remove dark theme attribute */
+  --force-light-mode: true;
+}
+
+/* Prevent dark mode styles from applying */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: light !important;
+  }
+  
+  html[data-theme="dark"],
+  html[data-theme] {
+    /* Override any dark theme variables */
+    --global-bg-color: #fff !important;
+    --global-text-color: #333 !important;
+  }
 }
 
 /* Fix profile image display */

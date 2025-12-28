@@ -25,9 +25,12 @@ const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 
 // Set the theme on page load or when explicitly called
 // Force light mode only
 let setTheme = (theme) => {
-  // Always force light mode
+  // Always force light mode - remove any dark theme attribute
   $("html").removeAttr("data-theme");
+  document.documentElement.removeAttribute("data-theme");
   localStorage.setItem("theme", "light");
+  // Force light color scheme
+  document.documentElement.style.colorScheme = "light";
 };
 
 // Toggle the theme manually
@@ -76,6 +79,13 @@ if (plotlyElements.length > 0) {
    Actions that should occur when the page has been fully loaded
    ========================================================================== */
 
+// Force light mode immediately on page load (before DOM ready)
+(function() {
+  document.documentElement.removeAttribute("data-theme");
+  document.documentElement.style.colorScheme = "light";
+  localStorage.setItem("theme", "light");
+})();
+
 $(document).ready(function () {
   // SCSS SETTINGS - These should be the same as the settings in the relevant files 
   const scssLarge = 925;          // pixels, from /_sass/_themes.scss
@@ -84,6 +94,9 @@ $(document).ready(function () {
   // Force light mode only
   setTheme("light");
   // Disable system preference listener - always use light mode
+  
+  // Prevent any dark mode from being applied
+  window.matchMedia('(prefers-color-scheme: dark)').removeEventListener("change", arguments.callee);
 
   // Enable the sticky footer
   var bumpIt = function () {
