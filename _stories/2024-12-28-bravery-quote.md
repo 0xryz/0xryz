@@ -4,8 +4,7 @@ collection: stories
 permalink: /stories/2024-12-28-bravery-quote/
 date: 2024-12-28
 excerpt: "> “Can a man still be brave if he's afraid?” “That is the only time a man can be brave.”"
-header:
-  teaser: /images/profile.png
+
 ---
 
 > “Can a man still be brave if he's afraid?” “That is the only time a man can be brave.”

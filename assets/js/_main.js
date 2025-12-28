@@ -26,7 +26,7 @@ const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 
 // Force light mode only
 let setTheme = (theme) => {
   // Always force light mode - remove any dark theme attribute
-  $("html").removeAttr("data-theme");
+    $("html").removeAttr("data-theme");
   document.documentElement.removeAttribute("data-theme");
   localStorage.setItem("theme", "light");
   // Force light color scheme
