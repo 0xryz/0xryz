@@ -9,6 +9,8 @@
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
     	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
+    {% elsif author.avatar contains "pictures/" %}
+    	<img src="{{ author.avatar | prepend: "/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
     {% else %}
     	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
     {% endif %}
@@ -84,9 +86,6 @@
       {% if author.dribbble %}
         <li><a href="https://dribbble.com/{{ author.dribbble }}"><i class="fab fa-fw fa-dribbble icon-pad-right" aria-hidden="true"></i>Dribbble</a></li>
       {% endif %}      
-      {% if author.github %}
-        <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
-      {% endif %}
       {% if author.hackerone %}
         <li><a href="https://hackerone.com/{{ author.hackerone }}"><i class="fas fa-fw fa-bug icon-pad-right" aria-hidden="true"></i>HackerOne</a></li>
       {% endif %}
